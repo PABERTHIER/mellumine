@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Content-Usage: train-ai=n
+
+Sitemap: https://mellumine.vercel.app/sitemap.xml

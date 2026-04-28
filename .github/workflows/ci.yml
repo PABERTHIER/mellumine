@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  test:
+    name: Ubuntu Build
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the code
+      - name: ⤵️ Checkout Source
+        uses: actions/checkout@v6
+
+      # Step 2: Setup Node.js
+      - name: 🛠️ Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+
+      # Step 3: Display Node.js version
+      - name: 🖥️ Display Node.js version
+        run: node --version
+
+      # Step 4: Enable Corepack
+      - name: ✅ Enable Corepack
+        run: corepack enable
+
+      # Step 5: Setup Yarn
+      - name: 🛠️ Setup Yarn
+        run: corepack prepare yarn@4.13.0 --activate
+
+      # Step 6: Install dependencies
+      - name: 🛠️ Install dependencies
+        run: yarn install --immutable
+
+      # Step 7: Run linter
+      - name: 🔍 Run linter
+        run: yarn lint

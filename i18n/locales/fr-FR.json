@@ -1,0 +1,185 @@
+{
+  "app": {
+    "name": "Mellumine",
+    "meta": {
+      "description": "Mellumine, vtubeuse francophone — renarde polaire des Astres. Découvrez son univers, ses créations à la main et sa mascotte Aria."
+    }
+  },
+  "miscellaneous": {
+    "site_description": "Mellumine, vtubeuse francophone — renarde polaire des Astres. Découvrez son univers, ses créations à la main et sa mascotte Aria.",
+    "loading": "Chargement…",
+    "menu": "Menu",
+    "close": "Fermer",
+    "back_to_top": "Retour en haut",
+    "skip_to_content": "Aller au contenu",
+    "language": "Langue",
+    "made_with_love": "Fait avec ✦ par Mellumine",
+    "all_rights_reserved": "Tous droits réservés",
+    "view_more": "Voir plus",
+    "view_less": "Voir moins",
+    "follow_me": "Me suivre",
+    "support_me": "Me soutenir",
+    "go_to": "Aller à",
+    "vtuber": "VTubeuse",
+    "creator": "Créatrice",
+    "handmade": "Fait main",
+    "plushies": "Peluches",
+    "streaming": "Streaming",
+    "polar_fox": "Renarde polaire",
+    "stars": "Astres",
+    "mascot": "Mascotte"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "plushies": "Peluches",
+    "contact": "Contact"
+  },
+  "pages": {
+    "home": {
+      "tab_name": "Accueil",
+      "meta": {
+        "content": "Bienvenue dans l'univers étoilé de Mellumine, renarde polaire des Astres. Vtubeuse francophone et créatrice de peluches uniques."
+      },
+      "title": "Mellumine",
+      "subtitle": "Renarde polaire des Astres",
+      "hero": {
+        "tagline": "Vtubeuse · Créatrice · Rêveuse d'étoiles",
+        "intro": "Bienvenue dans une galaxie cousue main, où chaque peluche est une étoile filante.",
+        "cta_discover": "Découvrir mon univers",
+        "cta_plushies": "Voir mes peluches"
+      },
+      "sections": {
+        "about_title": "Une étoile sous forme de vixen",
+        "about_text": "Je suis Mellumine, une renarde polaire venue des Astres. Sur Twitch, je partage mes streams cosy, mes confections de peluches faites main et toute ma petite galaxie. Aria, ma mascotte, m'accompagne dans chaque aventure.",
+        "about_cta": "En savoir plus sur moi",
+        "plushies_title": "Mes peluches faites main",
+        "plushies_text": "Chaque peluche est unique, cousue avec patience et amour pour rejoindre une nouvelle famille. Voici quelques-unes de mes créations.",
+        "plushies_cta": "Découvrir la collection",
+        "contact_title": "Rejoignez la galaxie",
+        "contact_text": "Twitch, Discord, Instagram, TikTok… retrouvez-moi sur tous mes réseaux et venez briller avec moi.",
+        "contact_cta": "Voir mes réseaux"
+      }
+    },
+    "about": {
+      "tab_name": "À propos",
+      "meta": {
+        "content": "Mellumine, renarde polaire des Astres, vtubeuse francophone et créatrice. Découvrez son univers, son modèle, sa mascotte Aria et son équipe."
+      },
+      "title": "À propos",
+      "subtitle": "Bienvenue dans ma galaxie",
+      "intro": "Je suis Mellumine, une renarde polaire venue d'un coin scintillant de l'univers. Mes streams sont des bulles douces où l'on peut souffler, rire et bricoler ensemble.",
+      "lore_title": "Mon histoire",
+      "lore_text": "Née sous une pluie d'étoiles filantes, je me suis posée sur Terre pour partager ma passion des choses brillantes, des animaux et de la création. La nuit, j'observe le ciel ; le jour, je couds des compagnons de rêve.",
+      "aria_title": "Aria, ma mascotte",
+      "aria_text": "Aria est ma compagne d'aventures, un petit esprit lumineux qui veille sur la communauté et m'accompagne dans chaque stream.",
+      "credits_title": "Crédits",
+      "credits_design": "Design du personnage",
+      "credits_art": "Art & illustrations",
+      "credits_rig": "Modèle et rig"
+    },
+    "plushies": {
+      "tab_name": "Peluches",
+      "meta": {
+        "content": "Découvrez la collection de peluches faites main par Mellumine, chacune cousue avec amour, étoile par étoile."
+      },
+      "title": "Mes peluches",
+      "subtitle": "Cousues main, étoile par étoile",
+      "intro": "Chaque peluche est conçue, coupée et cousue par mes soins. Aucune n'est tout à fait identique : ce sont des petites étoiles filantes textiles.",
+      "view_angles": "Voir sous tous les angles",
+      "front": "Face",
+      "back": "Dos",
+      "left": "Gauche",
+      "right": "Droite"
+    },
+    "contact": {
+      "tab_name": "Contact",
+      "meta": {
+        "content": "Retrouvez Mellumine sur Twitch, Discord, Instagram, TikTok, YouTube et X. Rejoignez sa galaxie et soutenez ses créations."
+      },
+      "title": "Contact",
+      "subtitle": "Rejoignez la galaxie",
+      "intro": "Envie de discuter, de me suivre ou de me soutenir ? Voici toutes les portes vers ma petite galaxie.",
+      "socials_title": "Mes réseaux",
+      "support_title": "Me soutenir",
+      "plushies_account": "Mon compte peluches",
+      "email_label": "Pour toute demande professionnelle"
+    }
+  },
+  "components": {
+    "site_header": {
+      "open_menu": "Ouvrir le menu",
+      "close_menu": "Fermer le menu"
+    },
+    "language_switcher": {
+      "label": "Changer de langue",
+      "current": "Langue actuelle"
+    },
+    "starfield": {
+      "label": "Champ d'étoiles décoratif"
+    },
+    "plushie_card": {
+      "view_all_angles": "Voir toutes les vues"
+    },
+    "social_card": {
+      "open_link": "Ouvrir le lien"
+    }
+  },
+  "pictures": {
+    "logo": {
+      "alt": "Logo Mellumine"
+    },
+    "aria": {
+      "title": "Aria, la mascotte",
+      "alt": "Illustration d'Aria, la mascotte lumineuse de Mellumine"
+    },
+    "mellumine_1": {
+      "alt": "Illustration de Mellumine, renarde polaire des Astres"
+    },
+    "mellumine_2": {
+      "alt": "Mellumine en pose dynamique"
+    },
+    "mellumine_3": {
+      "alt": "Mellumine entourée d'étoiles"
+    },
+    "mellumine_look": {
+      "alt": "Portrait de Mellumine"
+    },
+    "gremlin": {
+      "alt": "Mellu gremlin, version espiègle"
+    },
+    "plushies": {
+      "artikodin": { "title": "Artikodin", "alt": "Peluche Artikodin faite main" },
+      "blue_pink_butterfly": { "title": "Papillon bleu & rose", "alt": "Peluche papillon bleu et rose" },
+      "blue_white_snowflakes": { "title": "Flocons bleu & blanc", "alt": "Peluche flocon bleu et blanc" },
+      "goupix_alola_pink": { "title": "Goupix d'Alola rose", "alt": "Peluche Goupix d'Alola rose" },
+      "pink_cat": { "title": "Chat rose", "alt": "Peluche chat rose" },
+      "voltali": { "title": "Voltali", "alt": "Peluche Voltali" },
+      "white_blue_snowflakes": { "title": "Flocons blanc & bleu", "alt": "Peluche flocon blanc et bleu" }
+    }
+  },
+  "socials": {
+    "twitch": "Twitch",
+    "twitch_desc": "Streams cosy, créations & papote",
+    "instagram": "Instagram",
+    "instagram_desc": "Mes coulisses, photos & moments",
+    "instagram_plushies": "Instagram Peluches",
+    "instagram_plushies_desc": "Mes créations textiles",
+    "tiktok": "TikTok",
+    "tiktok_desc": "Petits clips et moments mignons",
+    "youtube": "YouTube",
+    "youtube_desc": "Rediffusions complètes",
+    "youtube_clips": "YouTube Clips",
+    "youtube_clips_desc": "Les meilleurs moments",
+    "x": "X",
+    "x_desc": "Annonces et pensées",
+    "discord": "Discord",
+    "discord_desc": "La communauté de la galaxie",
+    "kofi": "Ko-fi",
+    "kofi_desc": "Ma boutique en ligne",
+    "throne": "Throne",
+    "throne_desc": "Ma wishlist",
+    "streamelements": "StreamElements",
+    "streamelements_desc": "Faire un don"
+  }
+}

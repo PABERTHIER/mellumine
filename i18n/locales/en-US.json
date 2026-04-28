@@ -1,0 +1,185 @@
+{
+  "app": {
+    "name": "Mellumine",
+    "meta": {
+      "description": "Mellumine, French-speaking VTuber — polar vixen of the Stars. Step into her starry universe, handmade plushies and her mascot Aria."
+    }
+  },
+  "miscellaneous": {
+    "site_description": "Mellumine, French-speaking VTuber — polar vixen of the Stars. Step into her starry universe, handmade plushies and her mascot Aria.",
+    "loading": "Loading…",
+    "menu": "Menu",
+    "close": "Close",
+    "back_to_top": "Back to top",
+    "skip_to_content": "Skip to content",
+    "language": "Language",
+    "made_with_love": "Made with ✦ by Mellumine",
+    "all_rights_reserved": "All rights reserved",
+    "view_more": "View more",
+    "view_less": "View less",
+    "follow_me": "Follow me",
+    "support_me": "Support me",
+    "go_to": "Go to",
+    "vtuber": "VTuber",
+    "creator": "Creator",
+    "handmade": "Handmade",
+    "plushies": "Plushies",
+    "streaming": "Streaming",
+    "polar_fox": "Polar vixen",
+    "stars": "Stars",
+    "mascot": "Mascot"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "plushies": "Plushies",
+    "contact": "Contact"
+  },
+  "pages": {
+    "home": {
+      "tab_name": "Home",
+      "meta": {
+        "content": "Welcome to Mellumine's starry universe — French-speaking VTuber, polar vixen of the Stars, and creator of unique handmade plushies."
+      },
+      "title": "Mellumine",
+      "subtitle": "Polar vixen of the Stars",
+      "hero": {
+        "tagline": "VTuber · Maker · Stargazer",
+        "intro": "Welcome to a hand-stitched galaxy where every plushie is a shooting star.",
+        "cta_discover": "Discover my universe",
+        "cta_plushies": "See my plushies"
+      },
+      "sections": {
+        "about_title": "A star wearing fox ears",
+        "about_text": "I'm Mellumine, a polar vixen from the Stars. On Twitch I share cozy streams, my handmade plushies and my whole tiny galaxy. Aria, my mascot, follows me on every adventure.",
+        "about_cta": "Learn more about me",
+        "plushies_title": "Handmade plushies",
+        "plushies_text": "Every plushie is one of a kind, sewn with patience and love before joining a new family. Here's a glimpse of my creations.",
+        "plushies_cta": "Explore the collection",
+        "contact_title": "Join the galaxy",
+        "contact_text": "Twitch, Discord, Instagram, TikTok… find me everywhere and come shine with me.",
+        "contact_cta": "See my socials"
+      }
+    },
+    "about": {
+      "tab_name": "About",
+      "meta": {
+        "content": "Mellumine, polar vixen of the Stars, French-speaking VTuber and maker. Discover her world, her model, her mascot Aria and her team."
+      },
+      "title": "About",
+      "subtitle": "Welcome to my galaxy",
+      "intro": "I'm Mellumine, a polar vixen who landed from a sparkling corner of the universe. My streams are gentle bubbles where we can breathe, laugh and craft together.",
+      "lore_title": "My story",
+      "lore_text": "Born under a shower of shooting stars, I came down to Earth to share my love for shiny things, animals and crafting. By night I gaze at the sky; by day I sew dream companions.",
+      "aria_title": "Aria, my mascot",
+      "aria_text": "Aria is my adventure buddy, a small luminous spirit who watches over the community and joins me in every stream.",
+      "credits_title": "Credits",
+      "credits_design": "Character design",
+      "credits_art": "Art & illustrations",
+      "credits_rig": "Model & rig"
+    },
+    "plushies": {
+      "tab_name": "Plushies",
+      "meta": {
+        "content": "Discover Mellumine's handmade plushie collection, each one stitched with love, star by star."
+      },
+      "title": "My plushies",
+      "subtitle": "Hand-stitched, star by star",
+      "intro": "Each plushie is designed, cut and sewn by my own paws. None of them is exactly the same — they are tiny textile shooting stars.",
+      "view_angles": "View from every angle",
+      "front": "Front",
+      "back": "Back",
+      "left": "Left",
+      "right": "Right"
+    },
+    "contact": {
+      "tab_name": "Contact",
+      "meta": {
+        "content": "Find Mellumine on Twitch, Discord, Instagram, TikTok, YouTube and X. Join her galaxy and support her creations."
+      },
+      "title": "Contact",
+      "subtitle": "Join the galaxy",
+      "intro": "Want to chat, follow me or support my work? Here are all the doors to my little galaxy.",
+      "socials_title": "My socials",
+      "support_title": "Support me",
+      "plushies_account": "My plushie account",
+      "email_label": "For business enquiries"
+    }
+  },
+  "components": {
+    "site_header": {
+      "open_menu": "Open menu",
+      "close_menu": "Close menu"
+    },
+    "language_switcher": {
+      "label": "Switch language",
+      "current": "Current language"
+    },
+    "starfield": {
+      "label": "Decorative starfield"
+    },
+    "plushie_card": {
+      "view_all_angles": "View all angles"
+    },
+    "social_card": {
+      "open_link": "Open link"
+    }
+  },
+  "pictures": {
+    "logo": {
+      "alt": "Mellumine logo"
+    },
+    "aria": {
+      "title": "Aria, the mascot",
+      "alt": "Illustration of Aria, Mellumine's luminous mascot"
+    },
+    "mellumine_1": {
+      "alt": "Illustration of Mellumine, polar vixen of the Stars"
+    },
+    "mellumine_2": {
+      "alt": "Mellumine in a dynamic pose"
+    },
+    "mellumine_3": {
+      "alt": "Mellumine surrounded by stars"
+    },
+    "mellumine_look": {
+      "alt": "Portrait of Mellumine"
+    },
+    "gremlin": {
+      "alt": "Mellu gremlin, the mischievous version"
+    },
+    "plushies": {
+      "artikodin": { "title": "Articuno", "alt": "Handmade Articuno plushie" },
+      "blue_pink_butterfly": { "title": "Blue & Pink Butterfly", "alt": "Blue and pink butterfly plushie" },
+      "blue_white_snowflakes": { "title": "Blue & White Snowflakes", "alt": "Blue and white snowflake plushie" },
+      "goupix_alola_pink": { "title": "Pink Alolan Vulpix", "alt": "Pink Alolan Vulpix plushie" },
+      "pink_cat": { "title": "Pink Cat", "alt": "Pink cat plushie" },
+      "voltali": { "title": "Jolteon", "alt": "Jolteon plushie" },
+      "white_blue_snowflakes": { "title": "White & Blue Snowflakes", "alt": "White and blue snowflake plushie" }
+    }
+  },
+  "socials": {
+    "twitch": "Twitch",
+    "twitch_desc": "Cozy streams, crafting & chatter",
+    "instagram": "Instagram",
+    "instagram_desc": "Behind the scenes, photos & moments",
+    "instagram_plushies": "Instagram Plushies",
+    "instagram_plushies_desc": "My textile creations",
+    "tiktok": "TikTok",
+    "tiktok_desc": "Tiny clips and cute moments",
+    "youtube": "YouTube",
+    "youtube_desc": "Full stream replays",
+    "youtube_clips": "YouTube Clips",
+    "youtube_clips_desc": "The best moments",
+    "x": "X",
+    "x_desc": "Announcements and thoughts",
+    "discord": "Discord",
+    "discord_desc": "The galaxy community",
+    "kofi": "Ko-fi",
+    "kofi_desc": "My online shop",
+    "throne": "Throne",
+    "throne_desc": "My wishlist",
+    "streamelements": "StreamElements",
+    "streamelements_desc": "Make a donation"
+  }
+}
