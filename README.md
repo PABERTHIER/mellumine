@@ -1,5 +1,8 @@
 # Mellumine
 
+[![Build][build-badge]][build-link]
+[![Release][release-badge]][release-link]
+
 Portfolio website for **Mellumine** — a French-speaking polar fox VTuber from the Stars. The site showcases her universe, handmade plushies, mascot, and social links.
 
 🌐 **Live**: [mellumine.vercel.app](https://mellumine.vercel.app)
@@ -102,3 +105,9 @@ Follow the SEO pattern in `AGENTS.md` — every page requires `useHead` + `useSe
 | Design  | @Chuggoth      |
 | Art     | @Gwenevyr_     |
 | Rig     | Gwenevyr       |
+
+[build-badge]: https://github.com/PABERTHIER/mellumine/actions/workflows/ci.yml/badge.svg
+[build-link]: https://github.com/PABERTHIER/mellumine/actions/workflows/ci.yml
+
+[release-badge]: https://deploy-badge.vercel.app/?url=https://mellumine.vercel.app/&name=website
+[release-link]: https://mellumine.vercel.app
