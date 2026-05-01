@@ -1,16 +1,17 @@
 <template>
   <div class="language-switcher">
-    <button
+    <NuxtLink
       v-for="availableLocale in availableLocales"
       :key="availableLocale.code"
       :class="['btn', { active: availableLocale.code === locale }]"
+      :to="switchLocalePath(availableLocale.code)"
       :aria-label="
         $t('components.language_switcher.label') + ' ' + availableLocale.name
       "
       :aria-current="availableLocale.code === locale ? 'true' : 'false'"
-      @click="switchTo(availableLocale.code)">
+      @click="setLanguagePreference(availableLocale.code)">
       {{ availableLocale.code.toUpperCase() }}
-    </button>
+    </NuxtLink>
   </div>
 </template>
 
@@ -19,7 +20,6 @@ import type { LocaleCode } from '~/types/locales'
 
 const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
-const router = useRouter()
 
 const availableLocales = computed(() =>
   (locales.value as Array<{ code: LocaleCode; name: string }>).map(l => ({
@@ -28,10 +28,35 @@ const availableLocales = computed(() =>
   }))
 )
 
-const switchTo = (code: LocaleCode) => {
-  const path = switchLocalePath(code)
-  if (path) router.push(path)
+const setLanguagePreference = (code: LocaleCode) => {
+  if (code === locale.value) {
+    return
+  }
+
+  localStorage.setItem('preferredLanguage', code)
 }
+
+const updateDirAttribute = (newLocale: string) => {
+  const currentLocale = locales.value.find(l => l.code === newLocale)
+  document.documentElement.setAttribute('dir', currentLocale?.dir || 'ltr')
+}
+
+watch(locale, newLocale => {
+  updateDirAttribute(newLocale)
+})
+
+onMounted(() => {
+  const savedLanguage = localStorage.getItem('preferredLanguage') as LocaleCode
+
+  if (
+    savedLanguage &&
+    locales.value.some(locale => locale.code === savedLanguage)
+  ) {
+    locale.value = savedLanguage
+  }
+
+  updateDirAttribute(locale.value)
+})
 </script>
 
 <style lang="scss" scoped>

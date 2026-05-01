@@ -17,6 +17,7 @@ const availableLocaleAlternates = computed(() => {
   const localesFilteredUpdated = localesFiltered.map(
     x => x.language?.replace('-', '_') ?? 'en_US'
   )
+
   return localesFilteredUpdated.filter(
     (item, index) => localesFilteredUpdated.indexOf(item) === index
   )
