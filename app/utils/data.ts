@@ -4,26 +4,29 @@ export const plushies: Plushie[] = [
   {
     id: 'artikodin',
     i18nKey: 'artikodin',
+    dimensions: '35 x 25 cm',
     views: {
       front: '/images/plushies/artikodin-front.webp',
+      right: '/images/plushies/artikodin-right.webp',
       back: '/images/plushies/artikodin-back.webp',
       left: '/images/plushies/artikodin-left.webp',
-      right: '/images/plushies/artikodin-right.webp',
     },
   },
   {
     id: 'voltali',
     i18nKey: 'voltali',
+    dimensions: '15 x 25 cm',
     views: {
       front: '/images/plushies/voltali-front.webp',
+      right: '/images/plushies/voltali-right.webp',
       back: '/images/plushies/voltali-back.webp',
       left: '/images/plushies/voltali-left.webp',
-      right: '/images/plushies/voltali-right.webp',
     },
   },
   {
     id: 'goupix_alola_pink',
     i18nKey: 'goupix_alola_pink',
+    dimensions: '7.5 x 13.5 cm',
     views: {
       front: '/images/plushies/goupix-alola-pink-front.webp',
       back: '/images/plushies/goupix-alola-pink-back.webp',
@@ -32,6 +35,7 @@ export const plushies: Plushie[] = [
   {
     id: 'pink_cat',
     i18nKey: 'pink_cat',
+    dimensions: '8 x 10 cm',
     views: {
       front: '/images/plushies/pink-cat-front.webp',
       back: '/images/plushies/pink-cat-back.webp',
@@ -40,6 +44,7 @@ export const plushies: Plushie[] = [
   {
     id: 'blue_pink_butterfly',
     i18nKey: 'blue_pink_butterfly',
+    dimensions: '6 x 6 cm',
     views: {
       front: '/images/plushies/blue-pink-butterfly-front.webp',
       back: '/images/plushies/blue-pink-butterfly-back.webp',
@@ -48,6 +53,7 @@ export const plushies: Plushie[] = [
   {
     id: 'blue_white_snowflakes',
     i18nKey: 'blue_white_snowflakes',
+    dimensions: '6 x 6 cm',
     views: {
       front: '/images/plushies/blue-white-snowflakes-front.webp',
       back: '/images/plushies/blue-white-snowflakes-back.webp',
@@ -56,6 +62,7 @@ export const plushies: Plushie[] = [
   {
     id: 'white_blue_snowflakes',
     i18nKey: 'white_blue_snowflakes',
+    dimensions: '6 x 6 cm',
     views: {
       front: '/images/plushies/white-blue-snowflakes-front.webp',
       back: '/images/plushies/white-blue-snowflakes-back.webp',

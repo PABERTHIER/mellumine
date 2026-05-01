@@ -46,6 +46,7 @@ You **must** manually import:
 | Plushie images | `public/images/plushies/*.webp` |
 | Character images | `public/images/mellumine/*.webp` |
 | Misc images | `public/images/misc/*.webp` |
+| Favicons & manifest | `public/` root (favicon.ico, PNGs, site.webmanifest) |
 
 ### Key composables
 

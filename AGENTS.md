@@ -29,7 +29,10 @@ mellumine/
 │   ├── components/               # Auto-imported Vue components
 │   │   ├── SiteHeader.vue        # Navigation header
 │   │   ├── SiteFooter.vue        # Footer
-│   │   ├── PlushieCard.vue       # Plushie display card with views
+│   │   ├── Menu.vue              # Menu orchestrator (desktop + mobile)
+│   │   ├── DesktopMenu.vue       # Desktop navigation links
+│   │   ├── MobileMenu.vue        # Mobile fullscreen overlay menu
+│   │   ├── PlushieCard.vue       # Plushie display card with views, description, dimensions
 │   │   ├── SocialCard.vue        # Social/support link card
 │   │   ├── LanguageSwitcher.vue  # FR/EN locale switcher
 │   │   ├── Starfield.vue         # Animated starfield background
@@ -54,10 +57,19 @@ mellumine/
 │   ├── fr-FR.json                # French (default locale)
 │   └── en-US.json                # English
 ├── public/                       # Static assets
+│   ├── favicon.ico               # Multi-size favicon (16, 32, 48)
+│   ├── favicon-16x16.png         # 16×16 PNG favicon
+│   ├── favicon-32x32.png         # 32×32 PNG favicon
+│   ├── apple-touch-icon.png      # 180×180 Apple touch icon
+│   ├── android-chrome-192x192.png    # Android icon
+│   ├── android-chrome-512x512.png    # Android large icon
+│   ├── android-chrome-maskable-192x192.png  # PWA maskable icon
+│   ├── site.webmanifest          # Web app manifest
+│   ├── og-image.webp             # Open Graph image (1200×630)
 │   ├── images/
 │   │   ├── plushies/             # Plushie images (WebP, multi-view)
 │   │   ├── mellumine/            # Character illustrations
-│   │   └── misc/                 # Logos, icons, OG image
+│   │   └── misc/                 # Logos, icons
 ├── nuxt.config.ts                # Nuxt configuration
 ├── package.json                  # Dependencies and scripts
 └── .editorconfig                 # Editor formatting rules
@@ -202,6 +214,7 @@ pictures.{image_key}.alt
 ```
 pictures.plushies.{plushie_id}.title
 pictures.plushies.{plushie_id}.alt
+pictures.plushies.{plushie_id}.description
 ```
 
 **Shared labels** are in `miscellaneous.*`.
@@ -225,6 +238,26 @@ public/images/misc/                        # logo, OG image, other
 
 All images must be in **WebP** format.
 
+### Image attributes
+
+Every `<img>` element must have:
+- `:alt` — bound to an i18n key (`pictures.{key}.alt`)
+- `:title` — bound to an i18n key (`pictures.{key}.title`) for hover tooltip
+- `width` and `height` — explicit dimensions to prevent layout shift
+- `loading="lazy"` — except hero images which use `fetchpriority="high"`
+
+### Favicon & PWA icons
+
+Favicon files live in `public/` root (not in `images/`):
+- `favicon.ico` (multi-size: 16, 32, 48)
+- `favicon-16x16.png`, `favicon-32x32.png`
+- `apple-touch-icon.png` (180×180)
+- `android-chrome-192x192.png`, `android-chrome-512x512.png`
+- `android-chrome-maskable-192x192.png` (safe zone for PWA)
+- `site.webmanifest`
+
+All favicon `<link>` tags are in `nuxt.config.ts` → `app.head.link` (centralized, not in `app.vue`).
+
 ---
 
 ## Plushie Data Management (Core Pattern)
@@ -237,6 +270,7 @@ All images must be in **WebP** format.
 {
   id: 'artikodin',              // unique kebab-case id
   i18nKey: 'artikodin',         // matches pictures.plushies.{i18nKey} in locale files
+  dimensions: '30 × 25 cm',    // optional — physical dimensions
   views: {
     front: '/images/plushies/artikodin-front.webp',   // required
     back: '/images/plushies/artikodin-back.webp',     // required
@@ -254,7 +288,8 @@ Add under `pictures.plushies.{i18nKey}` in **both** locale files:
 {
   "{i18nKey}": {
     "title": "Descriptive name of the plushie",
-    "alt": "Short accessible description of the plushie image"
+    "alt": "Short accessible description of the plushie image",
+    "description": "A brief presentation of the plushie (1–2 sentences)"
   }
 }
 ```

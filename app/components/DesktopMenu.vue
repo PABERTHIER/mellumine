@@ -22,27 +22,27 @@ defineProps<{
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
 
-.nav-link {
-  position: relative;
-  padding: 0.5rem 0.85rem;
-  border-radius: 999px;
-  color: rgba($text-color, 0.85);
-  font-weight: 500;
-  text-decoration: none;
-  transition:
-    color 0.2s ease,
-    background 0.2s ease;
+  .nav-link {
+    position: relative;
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+    color: rgba($text-color, 0.85);
+    font-weight: 500;
+    text-decoration: none;
+    transition:
+      color 0.2s ease,
+      background 0.2s ease;
 
-  &:hover {
-    color: $white-color;
-    background: rgba($white-color, 0.06);
-  }
+    &:hover {
+      color: $white-color;
+      background: rgba($white-color, 0.06);
+    }
 
-  &.router-link-exact-active {
-    color: $white-color;
-    background: rgba($aurora-1, 0.2);
+    &.router-link-exact-active {
+      color: $white-color;
+      background: rgba($aurora-1, 0.2);
+    }
   }
 }
 </style>

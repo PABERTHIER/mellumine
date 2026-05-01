@@ -70,8 +70,9 @@ Where `{page}` = `home`, `about`, `plushies`, `contact`, or a new page name.
 ## Plushie Picture Keys
 
 ```
-pictures.plushies.{i18nKey}.title   — plushie display name
-pictures.plushies.{i18nKey}.alt     — accessible image description
+pictures.plushies.{i18nKey}.title       — plushie display name
+pictures.plushies.{i18nKey}.alt         — accessible image description
+pictures.plushies.{i18nKey}.description — brief presentation text (1–2 sentences)
 ```
 
 Where `{i18nKey}` matches the `i18nKey` field in `app/utils/data.ts` (snake_case).
@@ -114,7 +115,8 @@ computed(() => t('pages.plushies.meta.content'))
 | `title` | Natural French | Natural English |
 | `subtitle` | Poetic/evocative — matching brand voice | Natural English adaptation |
 | `pictures.*.alt` | Describes what is depicted — 5–12 words | Translated, descriptive |
-| `pictures.*.title` | Plushie name or description | Same |
+| `pictures.*.title` | Plushie name or image subject | Same |
+| `pictures.plushies.*.description` | Creative 1–2 sentence presentation | Natural English adaptation |
 
 ---
 

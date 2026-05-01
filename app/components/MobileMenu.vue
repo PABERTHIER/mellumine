@@ -55,15 +55,23 @@ const unlockScroll = () => {
 watch(
   () => props.open,
   val => {
-    if (import.meta.server) return
-    if (val) lockScroll()
-    else unlockScroll()
+    if (import.meta.server) {
+      return
+    }
+
+    if (val) {
+      lockScroll()
+    } else {
+      unlockScroll()
+    }
   },
   { immediate: true }
 )
 
 const onKeydown = (e: KeyboardEvent) => {
-  if (e.key === 'Escape' && props.open) emit('close')
+  if (e.key === 'Escape' && props.open) {
+    emit('close')
+  }
 }
 
 onMounted(() => {
@@ -71,7 +79,10 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
-  if (!import.meta.server) unlockScroll()
+  if (!import.meta.server) {
+    unlockScroll()
+  }
+
   window.removeEventListener('keydown', onKeydown)
 })
 </script>
@@ -87,76 +98,63 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: column;
   overscroll-behavior: contain;
-}
 
-.overlay-header {
-  flex-shrink: 0;
-  height: $header-height;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-inline: 1.25rem;
-}
+  .overlay-header {
+    flex-shrink: 0;
+    height: $header-height;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-inline: 1.25rem;
 
-.close-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: $white-color;
-  border-radius: 50%;
-  transition: background 0.2s ease;
+    .close-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: $white-color;
+      border-radius: 50%;
+      transition: background 0.2s ease;
 
-  &:hover {
-    background: rgba($white-color, 0.08);
+      &:hover {
+        background: rgba($white-color, 0.08);
+      }
+
+      .close-icon {
+        font-size: 1.5rem;
+      }
+    }
   }
-}
 
-.close-icon {
-  font-size: 1.5rem;
-}
+  .mobile-nav {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem 1.5rem 2rem;
 
-.mobile-nav {
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  padding: 0.5rem 1.5rem 2rem;
-}
+    .mobile-link {
+      font-family: $font-display;
+      font-size: 1.6rem;
+      padding: 0.85rem 0.5rem;
+      color: $text-color;
+      text-decoration: none;
+      border-bottom: 1px solid $border-subtle;
 
-.mobile-link {
-  font-family: $font-display;
-  font-size: 1.6rem;
-  padding: 0.85rem 0.5rem;
-  color: $text-color;
-  text-decoration: none;
-  border-bottom: 1px solid $border-subtle;
+      &.router-link-exact-active {
+        color: $aurora-2;
+      }
+    }
 
-  &.router-link-exact-active {
-    color: $aurora-2;
+    .mobile-lang {
+      margin-top: 1rem;
+      align-self: center;
+    }
   }
-}
-
-.mobile-lang {
-  margin-top: 1rem;
-  align-self: center;
-}
-
-.slide-enter-active,
-.slide-leave-active {
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
-}
-
-.slide-enter-from,
-.slide-leave-to {
-  opacity: 0;
-  transform: translateY(-10px);
 }
 </style>

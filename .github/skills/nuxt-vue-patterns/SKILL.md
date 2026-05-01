@@ -129,6 +129,7 @@ In the template:
 <img
   src="/images/mellumine/mellumine-look.webp"
   :alt="$t('pictures.mellumine_look.alt')"
+  :title="$t('pictures.mellumine_look.title')"
   fetchpriority="high"
   decoding="async"
   width="640"
@@ -138,6 +139,7 @@ In the template:
 <img
   src="/images/mellumine/mellumine-1.webp"
   :alt="$t('pictures.mellumine_1.alt')"
+  :title="$t('pictures.mellumine_1.title')"
   loading="lazy"
   decoding="async"
   width="600"
@@ -147,6 +149,7 @@ In the template:
 - All images must be **WebP** format
 - Always set `width` and `height` to prevent layout shift
 - Always bind `:alt` to an i18n key — never hardcode alt text
+- Always bind `:title` to an i18n key — displays tooltip on hover
 
 ---
 
@@ -171,7 +174,7 @@ const canonicalUrl = computed(() => `${baseUrl.value}${route.path}`)
 ```vue
 <PlushieCard v-for="p in plushies" :key="p.id" :plushie="p" />
 ```
-Handles multi-view display, thumbnails, and view switching automatically.
+Handles multi-view display, thumbnails, view switching, description, and dimensions automatically.
 
 ### SocialCard
 ```vue

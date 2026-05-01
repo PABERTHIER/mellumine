@@ -45,6 +45,7 @@ import type { ImageSource } from '~/types/content'
   ```
 - Use `:prop="value"` (v-bind shorthand) for dynamic props
 - Bind image `:alt` to an i18n key — never hardcode alt text
+- Bind image `:title` to an i18n key — all images display a tooltip on hover
 - Always set `width` and `height` on `<img>` elements
 
 ---

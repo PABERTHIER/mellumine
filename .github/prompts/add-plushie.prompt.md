@@ -14,10 +14,13 @@ Before starting, you **must** have:
    - The `i18nKey` will be the snake_case equivalent (e.g., `pink_cat`)
 2. **Image views available** — at minimum `front` and `back`
    - Filenames follow: `{name}-front.webp`, `{name}-back.webp`, `{name}-left.webp`, `{name}-right.webp`
-3. **FR title** — the plushie's name in French
-4. **FR alt** — short accessible description (5–12 words) in French
-5. **EN title** — the plushie's name in English
-6. **EN alt** — short accessible description (5–12 words) in English
+3. **Dimensions** — physical size (e.g., `30 × 25 cm`) — optional
+4. **FR title** — the plushie's name in French
+5. **FR alt** — short accessible description (5–12 words) in French
+6. **FR description** — brief presentation text (1–2 sentences) in French
+7. **EN title** — the plushie's name in English
+8. **EN alt** — short accessible description (5–12 words) in English
+9. **EN description** — brief presentation text (1–2 sentences) in English
 
 ## What to produce
 
@@ -28,6 +31,7 @@ Add to the `plushies` array:
 {
   id: '{name}',
   i18nKey: '{name_snake}',
+  dimensions: '{width} × {height} cm',  // optional
   views: {
     front: '/images/plushies/{name}-front.webp',
     back: '/images/plushies/{name}-back.webp',
@@ -44,7 +48,8 @@ In **`i18n/locales/fr-FR.json`** and **`i18n/locales/en-US.json`**, add under `p
 {
   "{name_snake}": {
     "title": "Plushie name",
-    "alt": "Short accessible description"
+    "alt": "Short accessible description",
+    "description": "Brief presentation text (1–2 sentences)"
   }
 }
 ```

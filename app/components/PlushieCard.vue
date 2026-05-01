@@ -6,6 +6,7 @@
       <img
         :src="currentSrc"
         :alt="$t('pictures.plushies.' + plushie.i18nKey + '.alt')"
+        :title="$t('pictures.plushies.' + plushie.i18nKey + '.title')"
         loading="lazy"
         decoding="async"
         width="600"
@@ -15,6 +16,13 @@
 
     <div class="meta">
       <h3>{{ $t('pictures.plushies.' + plushie.i18nKey + '.title') }}</h3>
+      <p class="description">
+        {{ $t('pictures.plushies.' + plushie.i18nKey + '.description') }}
+      </p>
+      <p v-if="plushie.dimensions" class="dimensions">
+        <UIcon name="i-lucide-ruler" class="dim-icon" />
+        {{ $t('pages.plushies.dimensions') }} : {{ plushie.dimensions }}
+      </p>
       <div v-if="viewKeys.length > 1" class="views" role="tablist">
         <button
           v-for="v in viewKeys"
@@ -67,89 +75,113 @@ const { el, visible } = useReveal()
     border-color: $box-shadow-aurora;
     box-shadow: 0 18px 40px -20px $box-shadow-aurora-strong;
   }
-}
 
-.frame {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  background: radial-gradient(
-    circle at center,
-    rgba($aurora-1, 0.14),
-    transparent 70%
-  );
+  .frame {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: radial-gradient(
+      circle at center,
+      rgba($aurora-1, 0.14),
+      transparent 70%
+    );
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition:
-      transform 0.6s ease,
-      opacity 0.3s ease;
-    padding: 1rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition:
+        transform 0.6s ease,
+        opacity 0.3s ease;
+      padding: 1rem;
+    }
+
+    &:hover img {
+      transform: scale(1.04);
+    }
+
+    .glow {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(
+        circle at 30% 20%,
+        rgba($aurora-2, 0.18),
+        transparent 60%
+      );
+      mix-blend-mode: screen;
+    }
   }
 
-  &:hover img {
-    transform: scale(1.04);
-  }
-}
+  .meta {
+    padding: 1rem 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
 
-.glow {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(
-    circle at 30% 20%,
-    rgba($aurora-2, 0.18),
-    transparent 60%
-  );
-  mix-blend-mode: screen;
-}
+    h3 {
+      font-size: 1.25rem;
+      margin: 0;
+      color: $white-color;
+      text-align: center;
+    }
 
-.meta {
-  padding: 1rem 1.25rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
+    .description {
+      font-size: 0.88rem;
+      color: $text-muted;
+      text-align: center;
+      line-height: 1.5;
+      margin: 0;
+    }
 
-  h3 {
-    font-size: 1.25rem;
-    margin: 0;
-    color: $white-color;
-    text-align: center;
-  }
-}
+    .dimensions {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+      color: $text-faint;
+      margin: 0;
 
-.views {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.35rem;
-}
+      .dim-icon {
+        font-size: 0.9rem;
+        color: $aurora-3;
+      }
+    }
 
-.view-btn {
-  appearance: none;
-  border: 1px solid $border-medium;
-  background: rgba($white-color, 0.03);
-  color: rgba($text-color, 0.8);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all 0.2s ease;
+    .views {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.35rem;
+      margin-top: 0.25rem;
 
-  &:hover {
-    color: $white-color;
-    border-color: rgba($aurora-1, 0.4);
-  }
+      .view-btn {
+        appearance: none;
+        border: 1px solid $border-medium;
+        background: rgba($white-color, 0.03);
+        color: rgba($text-color, 0.8);
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: all 0.2s ease;
 
-  &.active {
-    background: linear-gradient(120deg, $aurora-1, $aurora-2);
-    color: $white-color;
-    border-color: transparent;
+        &:hover {
+          color: $white-color;
+          border-color: rgba($aurora-1, 0.4);
+        }
+
+        &.active {
+          background: linear-gradient(120deg, $aurora-1, $aurora-2);
+          background-clip: padding-box;
+          color: $white-color;
+          border-color: transparent;
+        }
+      }
+    }
   }
 }
 </style>

@@ -6,6 +6,7 @@
     <img
       src="/images/misc/mellu-gremelin.webp"
       :alt="$t('pictures.gremlin.alt')"
+      :title="$t('pictures.gremlin.title')"
       width="120"
       height="120" />
   </div>
@@ -18,7 +19,10 @@ let scrollTriggered = false
 
 onMounted(() => {
   const trigger = () => {
-    if (scrollTriggered) return
+    if (scrollTriggered) {
+      return
+    }
+
     if (window.scrollY > window.innerHeight * 0.6) {
       scrollTriggered = true
       peeking.value = true
@@ -30,6 +34,7 @@ onMounted(() => {
       }, 25000)
     }
   }
+
   window.addEventListener('scroll', trigger, { passive: true })
   onBeforeUnmount(() => window.removeEventListener('scroll', trigger))
 })
@@ -61,19 +66,6 @@ onMounted(() => {
     right: -10px;
     transform: rotate(2deg) translateY(-4px);
     animation: wiggle 1.4s ease-in-out 0.7s 2;
-  }
-}
-
-@keyframes wiggle {
-  0%,
-  100% {
-    transform: rotate(2deg) translateY(-4px);
-  }
-  25% {
-    transform: rotate(-4deg) translateY(-8px);
-  }
-  75% {
-    transform: rotate(6deg) translateY(-4px);
   }
 }
 </style>
