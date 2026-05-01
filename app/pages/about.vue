@@ -11,6 +11,7 @@
           <img
             src="/images/mellumine/mellumine-2.webp"
             :alt="$t('pictures.mellumine_2.alt')"
+            :title="$t('pictures.mellumine_2.title')"
             loading="eager"
             decoding="async"
             width="600"
@@ -32,6 +33,7 @@
           <img
             src="/images/mellumine/mellumine-3.webp"
             :alt="$t('pictures.mellumine_3.alt')"
+            :title="$t('pictures.mellumine_3.title')"
             loading="lazy"
             decoding="async"
             width="600"
@@ -54,6 +56,7 @@
           <img
             src="/images/misc/aria.webp"
             :alt="$t('pictures.aria.alt')"
+            :title="$t('pictures.aria.title')"
             class="float-slow"
             loading="lazy"
             decoding="async"
@@ -147,7 +150,7 @@ useSeoMeta({
   ogImage: `${baseUrl.value}/${ogImageEndPath}`,
   ogImageSecureUrl: `${baseUrl.value}/${ogImageEndPath}`,
   ogImageAlt: computed(() => t('pages.about.meta.content')),
-  ogImageType: 'image/webp',
+  ogImageType: 'image/jpeg',
   ogImageWidth: '1200',
   ogImageHeight: '630',
   ogUrl: canonicalUrl.value,
@@ -156,7 +159,7 @@ useSeoMeta({
   twitterDescription: computed(() => t('pages.about.meta.content')),
   twitterImage: `${baseUrl.value}/${ogImageEndPath}`,
   twitterImageAlt: computed(() => t('pages.about.meta.content')),
-  twitterImageType: 'image/webp',
+  twitterImageType: 'image/jpeg',
   articleTag: [
     computed(() => t('miscellaneous.vtuber')).value,
     computed(() => t('miscellaneous.creator')).value,
@@ -180,170 +183,185 @@ const { el: creditsEl, visible: creditsVisible } = useReveal()
 <style lang="scss" scoped>
 .about {
   padding-bottom: 4rem;
-}
 
-.hero {
-  padding-block: 4rem 2rem;
-}
+  .hero {
+    padding-block: 4rem 2rem;
 
-.inner {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.5rem;
-  align-items: center;
+    @media (max-width: $hero-bp) {
+      text-align: center;
+    }
 
-  @media (min-width: $hero-bp) {
-    grid-template-columns: 1.2fr 1fr;
-  }
-}
+    .inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
 
-.eyebrow {
-  font-family: $font-display;
-  font-style: italic;
-  color: $aurora-3;
-  letter-spacing: 0.1em;
-  font-size: 1.1rem;
-}
+      @media (min-width: $hero-bp) {
+        grid-template-columns: 1.2fr 1fr;
+      }
 
-h1 {
-  font-size: clamp(2.5rem, 7vw, 5rem);
-  margin: 0.5rem 0 1.25rem;
-  line-height: 1;
-}
+      .eyebrow {
+        font-family: $font-display;
+        font-style: italic;
+        color: $aurora-3;
+        letter-spacing: 0.1em;
+        font-size: 1.1rem;
+      }
 
-.intro {
-  color: rgba($text-color, 0.78);
-  font-size: 1.1rem;
-  line-height: 1.7;
-  max-width: 34rem;
-}
+      h1 {
+        font-size: clamp(2.5rem, 7vw, 5rem);
+        margin: 0.5rem 0 1.25rem;
+        line-height: 1;
+      }
 
-.img {
-  border-radius: 1.5rem;
-  overflow: hidden;
-  border: 1px solid $border-light;
+      .intro {
+        color: rgba($text-color, 0.78);
+        font-size: 1.1rem;
+        line-height: 1.7;
+        max-width: 34rem;
 
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  &.round {
-    border-radius: 50% 30% 50% 30% / 30% 50% 30% 50%;
-    box-shadow: 0 20px 60px -20px $box-shadow-aurora;
-  }
-}
-
-.section {
-  padding-block: 4rem;
-}
-
-.split {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  align-items: center;
-
-  @media (min-width: $hero-bp) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  &.reverse {
-    @media (min-width: $hero-bp) {
-      .text {
-        order: 2;
+        @media (max-width: $hero-bp) {
+          max-width: none;
+        }
       }
     }
   }
-}
 
-.num {
-  font-family: $font-display;
-  font-size: 1rem;
-  letter-spacing: 0.3em;
-  color: $aurora-2;
-  margin-bottom: 0.5rem;
-}
+  .section {
+    padding-block: 4rem;
 
-.text h2 {
-  font-size: clamp(1.8rem, 4vw, 2.75rem);
-  margin: 0 0 1rem;
-}
+    .split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
 
-.text p {
-  color: rgba($text-color, 0.78);
-  line-height: 1.75;
-  font-size: 1.02rem;
-  max-width: 32rem;
-}
+      @media (min-width: $hero-bp) {
+        grid-template-columns: 1fr 1fr;
+      }
 
-.aria-frame {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+      &.reverse {
+        @media (min-width: $hero-bp) {
+          .text {
+            order: 2;
+          }
+        }
+      }
 
-  img {
-    position: relative;
-    max-width: 360px;
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 20px 40px rgba($aurora-3, 0.4));
+      .text {
+        h2 {
+          font-size: clamp(1.8rem, 4vw, 2.75rem);
+          margin: 0 0 1rem;
+        }
+
+        p {
+          color: rgba($text-color, 0.78);
+          line-height: 1.75;
+          font-size: 1.02rem;
+          max-width: 32rem;
+        }
+      }
+
+      .aria-frame {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          position: relative;
+          max-width: 360px;
+          width: 100%;
+          height: auto;
+          filter: drop-shadow(0 20px 40px rgba($aurora-3, 0.4));
+        }
+
+        .aria-glow {
+          position: absolute;
+          inset: 10%;
+          background: radial-gradient(
+            circle,
+            rgba($aurora-3, 0.45),
+            transparent 65%
+          );
+          filter: blur(40px);
+        }
+      }
+    }
+
+    &.credits {
+      text-align: center;
+
+      h2 {
+        font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+        margin: 0 0 2rem;
+      }
+
+      .credits-list {
+        max-width: 36rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+        margin-inline: auto;
+        list-style: none;
+
+        @media (min-width: 700px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        li {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 0.35rem;
+          background: rgba($white-color, 0.04);
+          border: 1px solid $border-light;
+          border-radius: 1rem;
+          padding: 1.25rem 1rem;
+        }
+
+        .role {
+          font-size: 0.78rem;
+          text-transform: uppercase;
+          letter-spacing: 0.2em;
+          color: $text-faint;
+        }
+
+        .name {
+          font-family: $font-display;
+          font-size: 1.25rem;
+          color: $white-color;
+        }
+      }
+    }
   }
-}
 
-.aria-glow {
-  position: absolute;
-  inset: 10%;
-  background: radial-gradient(circle, rgba($aurora-3, 0.45), transparent 65%);
-  filter: blur(40px);
-}
-
-.credits {
-  text-align: center;
-
-  h2 {
-    font-size: clamp(1.6rem, 3.5vw, 2.25rem);
-    margin: 0 0 2rem;
-  }
-}
-
-.credits-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  max-width: 36rem;
-  margin-inline: auto;
-
-  @media (min-width: 700px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  li {
-    background: rgba($white-color, 0.04);
+  .img {
+    border-radius: 1.5rem;
+    overflow: hidden;
     border: 1px solid $border-light;
-    border-radius: 1rem;
-    padding: 1.25rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    &.round {
+      border-radius: 50% 30% 50% 30% / 30% 50% 30% 50%;
+      box-shadow: 0 20px 60px -20px $box-shadow-aurora;
+    }
   }
 
-  .role {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: $text-faint;
-  }
-
-  .name {
+  .num {
     font-family: $font-display;
-    font-size: 1.25rem;
-    color: $white-color;
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    color: $aurora-2;
+    margin-bottom: 0.5rem;
   }
 }
 </style>

@@ -72,48 +72,48 @@ const { el, visible } = useReveal()
       transform: translate(4px, -4px);
     }
   }
-}
 
-.icon {
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: color-mix(in srgb, var(--accent) 22%, transparent);
-  color: var(--accent);
-  font-size: 1.4rem;
-  position: relative;
-  z-index: 1;
-}
+  .icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: color-mix(in srgb, var(--accent) 22%, transparent);
+    color: var(--accent);
+    font-size: 1.4rem;
+    position: relative;
+    z-index: 1;
+  }
 
-.text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  min-width: 0;
-  flex: 1;
-  position: relative;
-  z-index: 1;
-}
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+    flex: 1;
+    position: relative;
+    z-index: 1;
 
-.name {
-  font-weight: 600;
-  font-size: 1rem;
-}
+    .name {
+      font-weight: 600;
+      font-size: 1rem;
+    }
 
-.desc {
-  font-size: 0.85rem;
-  color: rgba($text-color, 0.65);
-}
+    .desc {
+      font-size: 0.85rem;
+      color: rgba($text-color, 0.65);
+    }
+  }
 
-.arrow {
-  position: relative;
-  z-index: 1;
-  font-size: 1.1rem;
-  color: rgba($text-color, 0.7);
-  transition: transform 0.3s ease;
+  .arrow {
+    position: relative;
+    z-index: 1;
+    font-size: 1.1rem;
+    color: rgba($text-color, 0.7);
+    transition: transform 0.3s ease;
+  }
 }
 </style>

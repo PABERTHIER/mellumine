@@ -18,6 +18,7 @@ export const plushies: Plushie[] = [
   {
     id: 'artikodin',           // kebab-case unique id
     i18nKey: 'artikodin',      // snake_case — matches pictures.plushies.{i18nKey} in locale files
+    dimensions: '30 × 25 cm', // optional — physical dimensions (width × height)
     views: {
       front: '/images/plushies/artikodin-front.webp',   // required
       back: '/images/plushies/artikodin-back.webp',     // required
@@ -60,6 +61,7 @@ Only include view keys for image files that actually exist.
 {
   id: '{name}',
   i18nKey: '{name_snake}',
+  dimensions: '{width} × {height} cm',  // optional
   views: {
     front: '/images/plushies/{name}-front.webp',
     back: '/images/plushies/{name}-back.webp',
@@ -75,7 +77,8 @@ Only include view keys for image files that actually exist.
 {
   "{name_snake}": {
     "title": "Nom de la peluche en français",
-    "alt": "Description courte de l'image (5–12 mots)"
+    "alt": "Description courte de l'image (5–12 mots)",
+    "description": "Brève présentation de la peluche (1–2 phrases)"
   }
 }
 ```
@@ -85,7 +88,8 @@ Only include view keys for image files that actually exist.
 {
   "{name_snake}": {
     "title": "Plushie name in English",
-    "alt": "Short English description (5–12 words)"
+    "alt": "Short English description (5–12 words)",
+    "description": "Brief presentation of the plushie (1–2 sentences)"
   }
 }
 ```
@@ -103,6 +107,8 @@ Run `yarn lint` to confirm no issues.
 | `title` | The plushie's recognisable name |
 | `alt` (FR) | Describes what is shown: e.g., "Peluche Artikodin vu de face, bleu et blanc" |
 | `alt` (EN) | Natural English: e.g., "Artikodin plushie front view, blue and white" |
+| `description` (FR) | Creative 1–2 sentence presentation of the plushie |
+| `description` (EN) | Natural English adaptation of the FR description |
 
 - Keep `alt` to 5–12 words
 - Never add a key to one locale file without adding it to the other

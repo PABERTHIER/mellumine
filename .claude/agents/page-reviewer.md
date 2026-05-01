@@ -42,12 +42,13 @@ Read the Vue file. Note the `urlEndPath`, `ogImageEndPath`, and the i18n key pre
 **Template:**
 - [ ] Internal links use `<NuxtLinkLocale>` (never `<NuxtLink>` with `localePath`)
 - [ ] Images have `:alt` bound to an i18n key (not a hardcoded string)
+- [ ] Images have `:title` bound to an i18n key (tooltip on hover)
 - [ ] Images have `loading="lazy"` (except above-the-fold hero image which uses `fetchpriority="high"`)
 - [ ] Images have `width` and `height` attributes set
 
 **Style:**
 - [ ] Uses `<style lang="scss" scoped>`
-- [ ] Uses CSS custom properties (`var(--aurora-1)`) not SCSS variables
+- [ ] Uses SCSS variables (`$aurora-1`, `$font-display`) — not CSS custom properties in `<style>` blocks
 
 ---
 

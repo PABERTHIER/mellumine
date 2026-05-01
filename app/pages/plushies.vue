@@ -78,7 +78,7 @@ useSeoMeta({
   ogImage: `${baseUrl.value}/${ogImageEndPath}`,
   ogImageSecureUrl: `${baseUrl.value}/${ogImageEndPath}`,
   ogImageAlt: computed(() => t('pages.plushies.meta.content')),
-  ogImageType: 'image/webp',
+  ogImageType: 'image/jpeg',
   ogImageWidth: '1200',
   ogImageHeight: '630',
   ogUrl: canonicalUrl.value,
@@ -87,7 +87,7 @@ useSeoMeta({
   twitterDescription: computed(() => t('pages.plushies.meta.content')),
   twitterImage: `${baseUrl.value}/${ogImageEndPath}`,
   twitterImageAlt: computed(() => t('pages.plushies.meta.content')),
-  twitterImageType: 'image/webp',
+  twitterImageType: 'image/jpeg',
   articleTag: [
     computed(() => t('miscellaneous.plushies')).value,
     computed(() => t('miscellaneous.handmade')).value,
@@ -104,49 +104,49 @@ useSeoMeta({
 <style lang="scss" scoped>
 .plushies-page {
   padding-bottom: 4rem;
-}
 
-.hero {
-  padding-block: 4rem 2rem;
-  text-align: center;
-}
+  .hero {
+    padding-block: 4rem 2rem;
+    text-align: center;
 
-.eyebrow {
-  font-family: $font-display;
-  font-style: italic;
-  color: $aurora-3;
-  letter-spacing: 0.1em;
-}
+    .eyebrow {
+      font-family: $font-display;
+      font-style: italic;
+      color: $aurora-3;
+      letter-spacing: 0.1em;
+    }
 
-h1 {
-  font-size: clamp(2.5rem, 7vw, 5rem);
-  margin: 0.5rem 0 1.25rem;
-  line-height: 1;
-}
+    h1 {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      margin: 0.5rem 0 1.25rem;
+      line-height: 1;
+    }
 
-.intro {
-  color: rgba($text-color, 0.78);
-  max-width: 38rem;
-  margin: 0 auto;
-  line-height: 1.7;
-  font-size: 1.05rem;
-}
-
-.grid-section {
-  padding-block: 2rem 0;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-
-  @media (min-width: $sm) {
-    grid-template-columns: repeat(2, 1fr);
+    .intro {
+      color: rgba($text-color, 0.78);
+      max-width: 38rem;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
   }
 
-  @media (min-width: $lg) {
-    grid-template-columns: repeat(3, 1fr);
+  .grid-section {
+    padding-block: 2rem 0;
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+
+      @media (min-width: $sm) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width: $lg) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
   }
 }
 </style>

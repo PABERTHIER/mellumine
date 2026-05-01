@@ -11,6 +11,7 @@ export type PlushieView = 'front' | 'back' | 'left' | 'right'
 export type Plushie = {
   id: string
   i18nKey: string
+  dimensions?: string
   views: Partial<Record<PlushieView, string>>
 }
 
