@@ -5,35 +5,16 @@
       "description": "Mellumine, vtubeuse francophone — renarde polaire des Astres. Découvrez son univers, ses créations à la main et sa mascotte Aria."
     }
   },
-  "miscellaneous": {
-    "site_description": "Mellumine, vtubeuse francophone — renarde polaire des Astres. Découvrez son univers, ses créations à la main et sa mascotte Aria.",
-    "loading": "Chargement…",
-    "menu": "Menu",
-    "close": "Fermer",
-    "back_to_top": "Retour en haut",
-    "skip_to_content": "Aller au contenu",
-    "language": "Langue",
-    "made_with_love": "Fait avec ✦ par Mellumine",
-    "all_rights_reserved": "Tous droits réservés",
-    "view_more": "Voir plus",
-    "view_less": "Voir moins",
-    "follow_me": "Me suivre",
-    "support_me": "Me soutenir",
-    "go_to": "Aller à",
-    "vtuber": "VTubeuse",
-    "creator": "Créatrice",
-    "handmade": "Fait main",
-    "plushies": "Peluches",
-    "streaming": "Streaming",
-    "polar_fox": "Renarde polaire",
-    "stars": "Astres",
-    "mascot": "Mascotte"
-  },
   "navigation": {
     "home": "Accueil",
     "about": "À propos",
     "plushies": "Peluches",
     "contact": "Contact"
+  },
+  "error": {
+    "oops": "Oups...",
+    "404_error": "La page que vous cherchez s'est perdue dans les étoiles.",
+    "500_error": "Une étoile filante s'est cachée. Réessayez plus tard."
   },
   "pages": {
     "home": {
@@ -74,7 +55,7 @@
       "aria_title": "Aria, ma mascotte",
       "aria_text": "Aria est ma compagne d'aventures, un petit esprit lumineux qui veille sur la communauté et m'accompagne dans chaque stream.",
       "credits_title": "Crédits",
-      "credits_design": "Design du personnage",
+      "credits_design": "Design du modèle",
       "credits_art": "Art & illustrations",
       "credits_rig": "Modèle et rig"
     },
@@ -87,6 +68,7 @@
       "subtitle": "Cousues main, étoile par étoile",
       "intro": "Chaque peluche est conçue, coupée et cousue par mes soins. Aucune n'est tout à fait identique : ce sont des petites étoiles filantes textiles.",
       "view_angles": "Voir sous tous les angles",
+      "dimensions": "Dimensions",
       "front": "Face",
       "back": "Dos",
       "left": "Gauche",
@@ -127,6 +109,7 @@
   },
   "pictures": {
     "logo": {
+      "title": "Logo Mellumine",
       "alt": "Logo Mellumine"
     },
     "aria": {
@@ -134,28 +117,61 @@
       "alt": "Illustration d'Aria, la mascotte lumineuse de Mellumine"
     },
     "mellumine_1": {
+      "title": "Mellumine, renarde polaire",
       "alt": "Illustration de Mellumine, renarde polaire des Astres"
     },
     "mellumine_2": {
+      "title": "Mellumine en action",
       "alt": "Mellumine en pose dynamique"
     },
     "mellumine_3": {
+      "title": "Mellumine et les étoiles",
       "alt": "Mellumine entourée d'étoiles"
     },
     "mellumine_look": {
+      "title": "Portrait de Mellumine",
       "alt": "Portrait de Mellumine"
     },
     "gremlin": {
+      "title": "Mellu gremlin",
       "alt": "Mellu gremlin, version espiègle"
     },
     "plushies": {
-      "artikodin": { "title": "Artikodin", "alt": "Peluche Artikodin faite main" },
-      "blue_pink_butterfly": { "title": "Papillon bleu & rose", "alt": "Peluche papillon bleu et rose" },
-      "blue_white_snowflakes": { "title": "Flocons bleu & blanc", "alt": "Peluche flocon bleu et blanc" },
-      "goupix_alola_pink": { "title": "Goupix d'Alola rose", "alt": "Peluche Goupix d'Alola rose" },
-      "pink_cat": { "title": "Chat rose", "alt": "Peluche chat rose" },
-      "voltali": { "title": "Voltali", "alt": "Peluche Voltali" },
-      "white_blue_snowflakes": { "title": "Flocons blanc & bleu", "alt": "Peluche flocon blanc et bleu" }
+      "artikodin": {
+        "title": "Artikodin",
+        "alt": "Peluche Artikodin faite main",
+        "description": "Elle a été réalisée avec des tissus Minky Kullaloo de différentes teintes de bleu, ainsi qu'un tissus gris ShannonFabrics. La peluche est rembourrée avec du rembourrage anti acarien, ainsi qu'un rembourrage ouate. Pour la broderie, elle est réalisée avec ma machine à broder et du fil New Brothread."
+      },
+      "blue_pink_butterfly": {
+        "title": "Papillon bleu & rose",
+        "alt": "Peluche papillon bleu et rose",
+        "description": "Cette peluche est réalisée avec du tissu minky Kullaloo et du fils spéciale broderie New Brothread."
+      },
+      "blue_white_snowflakes": {
+        "title": "Flocons bleu & blanc",
+        "alt": "Peluche flocon bleu et blanc",
+        "description": "Ces peluches sont réalisées avec du tissu minky Kullaloo et du fils spéciale broderie New Brothread."
+      },
+      "goupix_alola_pink": {
+        "title": "Goupix d'Alola rose",
+        "alt": "Peluche Goupix d'Alola rose",
+        "description": "Elle a été réalisée avec des tissus ShannonFabrics. Pour la broderie, elle est réalisée avec ma machine à broder brother céleste cx1e et du fil New Brothread."
+      },
+      "pink_cat": {
+        "title": "Chat rose",
+        "alt": "Peluche chat rose",
+        "description": "Cette peluche est réalisée avec du tissu minky Shannon Minky Cuddle et du fils spéciale broderie New Brothread."
+      },
+      "voltali": {
+        "title": "Voltali",
+        "alt": "Peluche Voltali",
+        "description": "Elle a été réalisée avec du tissus Minky Kullaloo jaune, ainsi qu'un tissus effet \"fourrure blanche\". La peluche est rembourrée avec du rembourrage anti acarien, ainsi qu'un rembourrage ouate. Pour la broderie, elle est réalisée avec ma machine à broder et du fil New Brothread."
+      },
+      "white_blue_snowflakes": {
+        "title": "Flocons blanc & bleu",
+        "alt": "Peluche flocon blanc et bleu",
+        "description": "Ces peluches sont réalisées avec du tissu minky Kullaloo et du fils spéciale broderie New Brothread."
+      }
     }
   },
   "socials": {
@@ -181,5 +197,30 @@
     "throne_desc": "Ma wishlist",
     "streamelements": "StreamElements",
     "streamelements_desc": "Faire un don"
+  },
+  "miscellaneous": {
+    "author_name": "Mellumine",
+    "site_description": "Mellumine, vtubeuse francophone — renarde polaire des Astres. Découvrez son univers, ses créations à la main et sa mascotte Aria.",
+    "loading": "Chargement…",
+    "menu": "Menu",
+    "close": "Fermer",
+    "back_to_top": "Retour en haut",
+    "skip_to_content": "Aller au contenu",
+    "language": "Langue",
+    "made_with_love": "Fait avec ✦ par Mellumine",
+    "all_rights_reserved": "Tous droits réservés",
+    "view_more": "Voir plus",
+    "view_less": "Voir moins",
+    "follow_me": "Me suivre",
+    "support_me": "Me soutenir",
+    "go_to": "Aller à",
+    "vtuber": "VTubeuse",
+    "creator": "Créatrice",
+    "handmade": "Fait main",
+    "plushies": "Peluches",
+    "streaming": "Streaming",
+    "polar_fox": "Renarde polaire",
+    "stars": "Astres",
+    "mascot": "Mascotte"
   }
 }

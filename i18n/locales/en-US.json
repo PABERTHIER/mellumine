@@ -5,35 +5,16 @@
       "description": "Mellumine, French-speaking VTuber — polar vixen of the Stars. Step into her starry universe, handmade plushies and her mascot Aria."
     }
   },
-  "miscellaneous": {
-    "site_description": "Mellumine, French-speaking VTuber — polar vixen of the Stars. Step into her starry universe, handmade plushies and her mascot Aria.",
-    "loading": "Loading…",
-    "menu": "Menu",
-    "close": "Close",
-    "back_to_top": "Back to top",
-    "skip_to_content": "Skip to content",
-    "language": "Language",
-    "made_with_love": "Made with ✦ by Mellumine",
-    "all_rights_reserved": "All rights reserved",
-    "view_more": "View more",
-    "view_less": "View less",
-    "follow_me": "Follow me",
-    "support_me": "Support me",
-    "go_to": "Go to",
-    "vtuber": "VTuber",
-    "creator": "Creator",
-    "handmade": "Handmade",
-    "plushies": "Plushies",
-    "streaming": "Streaming",
-    "polar_fox": "Polar vixen",
-    "stars": "Stars",
-    "mascot": "Mascot"
-  },
   "navigation": {
     "home": "Home",
     "about": "About",
     "plushies": "Plushies",
     "contact": "Contact"
+  },
+  "error": {
+    "oops": "Oops...",
+    "404_error": "The page you are looking for has been lost into the stars.",
+    "500_error": "A shooting star has disappeared. Please try again later."
   },
   "pages": {
     "home": {
@@ -74,7 +55,7 @@
       "aria_title": "Aria, my mascot",
       "aria_text": "Aria is my adventure buddy, a small luminous spirit who watches over the community and joins me in every stream.",
       "credits_title": "Credits",
-      "credits_design": "Character design",
+      "credits_design": "Model design",
       "credits_art": "Art & illustrations",
       "credits_rig": "Model & rig"
     },
@@ -87,6 +68,7 @@
       "subtitle": "Hand-stitched, star by star",
       "intro": "Each plushie is designed, cut and sewn by my own paws. None of them is exactly the same — they are tiny textile shooting stars.",
       "view_angles": "View from every angle",
+      "dimensions": "Dimensions",
       "front": "Front",
       "back": "Back",
       "left": "Left",
@@ -127,6 +109,7 @@
   },
   "pictures": {
     "logo": {
+      "title": "Mellumine Logo",
       "alt": "Mellumine logo"
     },
     "aria": {
@@ -134,28 +117,61 @@
       "alt": "Illustration of Aria, Mellumine's luminous mascot"
     },
     "mellumine_1": {
+      "title": "Mellumine, polar vixen",
       "alt": "Illustration of Mellumine, polar vixen of the Stars"
     },
     "mellumine_2": {
+      "title": "Mellumine in action",
       "alt": "Mellumine in a dynamic pose"
     },
     "mellumine_3": {
+      "title": "Mellumine and the stars",
       "alt": "Mellumine surrounded by stars"
     },
     "mellumine_look": {
+      "title": "Portrait of Mellumine",
       "alt": "Portrait of Mellumine"
     },
     "gremlin": {
+      "title": "Mellu gremlin",
       "alt": "Mellu gremlin, the mischievous version"
     },
     "plushies": {
-      "artikodin": { "title": "Articuno", "alt": "Handmade Articuno plushie" },
-      "blue_pink_butterfly": { "title": "Blue & Pink Butterfly", "alt": "Blue and pink butterfly plushie" },
-      "blue_white_snowflakes": { "title": "Blue & White Snowflakes", "alt": "Blue and white snowflake plushie" },
-      "goupix_alola_pink": { "title": "Pink Alolan Vulpix", "alt": "Pink Alolan Vulpix plushie" },
-      "pink_cat": { "title": "Pink Cat", "alt": "Pink cat plushie" },
-      "voltali": { "title": "Jolteon", "alt": "Jolteon plushie" },
-      "white_blue_snowflakes": { "title": "White & Blue Snowflakes", "alt": "White and blue snowflake plushie" }
+      "artikodin": {
+        "title": "Articuno",
+        "alt": "Handmade Articuno plushie",
+        "description": "It was made with Minky Kullaloo fabrics in various shades of blue, as well as a gray ShannonFabrics fabric. The plush toy is stuffed with anti-mite filling and wadding. The embroidery was done with my embroidery machine and New Brothread thread."
+      },
+      "blue_pink_butterfly": {
+        "title": "Blue & Pink Butterfly",
+        "alt": "Blue and pink butterfly plushie",
+        "description": "This plush toy is made with Kullaloo minky fabric and New Brothread special embroidery thread."
+      },
+      "blue_white_snowflakes": {
+        "title": "Blue & White Snowflakes",
+        "alt": "Blue and white snowflake plushie",
+        "description": "These plush toys are made with Kullaloo minky fabric and New Brothread special embroidery thread."
+      },
+      "goupix_alola_pink": {
+        "title": "Pink Alolan Vulpix",
+        "alt": "Pink Alolan Vulpix plushie",
+        "description": "It was made with ShannonFabrics fabrics. The embroidery was done with my Brother Celeste CX1E embroidery machine and New Brothread thread."
+      },
+      "pink_cat": {
+        "title": "Pink Cat",
+        "alt": "Pink cat plushie",
+        "description": "This plush toy is made with Shannon Minky Cuddle fabric and New Brothread special embroidery thread."
+      },
+      "voltali": {
+        "title": "Jolteon",
+        "alt": "Jolteon plushie",
+        "description": "It was made with yellow Minky Kullaloo fabric and a white faux fur fabric. The plush toy is stuffed with anti-mite filling and wadding. The embroidery was done with my embroidery machine and New Brothread thread."
+      },
+      "white_blue_snowflakes": {
+        "title": "White & Blue Snowflakes",
+        "alt": "White and blue snowflake plushie",
+        "description": "These plush toys are made with Kullaloo minky fabric and New Brothread special embroidery thread."
+      }
     }
   },
   "socials": {
@@ -181,5 +197,30 @@
     "throne_desc": "My wishlist",
     "streamelements": "StreamElements",
     "streamelements_desc": "Make a donation"
+  },
+  "miscellaneous": {
+    "author_name": "Mellumine",
+    "site_description": "Mellumine, French-speaking VTuber — polar vixen of the Stars. Step into her starry universe, handmade plushies and her mascot Aria.",
+    "loading": "Loading…",
+    "menu": "Menu",
+    "close": "Close",
+    "back_to_top": "Back to top",
+    "skip_to_content": "Skip to content",
+    "language": "Language",
+    "made_with_love": "Made with ✦ by Mellumine",
+    "all_rights_reserved": "All rights reserved",
+    "view_more": "View more",
+    "view_less": "View less",
+    "follow_me": "Follow me",
+    "support_me": "Support me",
+    "go_to": "Go to",
+    "vtuber": "VTuber",
+    "creator": "Creator",
+    "handmade": "Handmade",
+    "plushies": "Plushies",
+    "streaming": "Streaming",
+    "polar_fox": "Polar vixen",
+    "stars": "Stars",
+    "mascot": "Mascot"
   }
 }

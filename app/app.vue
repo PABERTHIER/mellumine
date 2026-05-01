@@ -17,6 +17,7 @@ const availableLocaleAlternates = computed(() => {
   const localesFilteredUpdated = localesFiltered.map(
     x => x.language?.replace('-', '_') ?? 'en_US'
   )
+
   return localesFilteredUpdated.filter(
     (item, index) => localesFilteredUpdated.indexOf(item) === index
   )
@@ -27,7 +28,6 @@ useHead({
   meta: [
     { name: 'description', content: computed(() => t('app.meta.description')) },
   ],
-  link: [{ rel: 'icon', type: 'image/webp', href: '/images/misc/logo.webp' }],
 })
 
 useSeoMeta({
@@ -40,7 +40,7 @@ useSeoMeta({
   ogImage: `${baseUrl.value}/${ogImageEndPath}`,
   ogImageSecureUrl: `${baseUrl.value}/${ogImageEndPath}`,
   ogImageAlt: computed(() => t('app.meta.description')),
-  ogImageType: 'image/webp',
+  ogImageType: 'image/jpeg',
   ogImageWidth: '1200',
   ogImageHeight: '630',
   ogUrl: `${baseUrl.value}`,
@@ -52,11 +52,14 @@ useSeoMeta({
   twitterDescription: computed(() => t('app.meta.description')),
   twitterImage: `${baseUrl.value}/${ogImageEndPath}`,
   twitterImageAlt: computed(() => t('app.meta.description')),
-  twitterImageType: 'image/webp',
-  author: 'Mellumine',
-  creator: 'Mellumine',
-  articleAuthor: ['Mellumine'],
+  twitterImageType: 'image/jpeg',
+  author: computed(() => t('miscellaneous.author_name')),
+  creator: computed(() => t('miscellaneous.author_name')),
+  articleAuthor: computed(() => [
+    computed(() => t('miscellaneous.author_name')).value,
+  ]),
   articleTag: computed(() => [
+    computed(() => t('app.name')).value,
     computed(() => t('miscellaneous.vtuber')).value,
     computed(() => t('miscellaneous.creator')).value,
     computed(() => t('miscellaneous.handmade')).value,
@@ -65,8 +68,8 @@ useSeoMeta({
     computed(() => t('miscellaneous.polar_fox')).value,
     computed(() => t('miscellaneous.stars')).value,
     computed(() => t('miscellaneous.mascot')).value,
-    computed(() => t('app.name')).value,
   ]),
+  profileUsername: computed(() => t('miscellaneous.author_name')),
   publisher: 'https://mellumine.vercel.app',
   generator: 'https://nuxt.com/',
   mobileWebAppCapable: 'yes',
@@ -78,20 +81,4 @@ useSeoMeta({
 })
 </script>
 
-<style lang="scss">
-.page-enter-active,
-.page-leave-active,
-.layout-enter-active,
-.layout-leave-active {
-  transition:
-    opacity 0.4s ease,
-    transform 0.5s ease;
-}
-.page-enter-from,
-.page-leave-to,
-.layout-enter-from,
-.layout-leave-to {
-  opacity: 0;
-  transform: translateY(12px);
-}
-</style>
+<style lang="scss" scoped></style>

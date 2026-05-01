@@ -27,6 +27,7 @@ This file provides Copilot-specific behavioral guidance that complements `AGENTS
 - All image paths start with `/images/` (relative to `public/`)
 - Always set `loading="lazy"` on images (except hero images which use `fetchpriority="high"`)
 - Bind `:alt` to i18n keys — never hardcode alt text
+- Bind `:title` to i18n keys — all images display a tooltip on hover
 
 ## Git Policy
 

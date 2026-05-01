@@ -3,11 +3,16 @@ export const useReveal = () => {
   const visible = ref(false)
 
   onMounted(() => {
-    if (!el.value) return
-    if (typeof IntersectionObserver === 'undefined') {
-      visible.value = true
+    if (!el.value) {
       return
     }
+
+    if (typeof IntersectionObserver === 'undefined') {
+      visible.value = true
+
+      return
+    }
+
     const obs = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
