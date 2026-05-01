@@ -15,24 +15,30 @@
     </div>
 
     <div class="meta">
-      <h3>{{ $t('pictures.plushies.' + plushie.i18nKey + '.title') }}</h3>
-      <p class="description">
-        {{ $t('pictures.plushies.' + plushie.i18nKey + '.description') }}
-      </p>
-      <p v-if="plushie.dimensions" class="dimensions">
-        <UIcon name="i-lucide-ruler" class="dim-icon" />
-        {{ $t('pages.plushies.dimensions') }} : {{ plushie.dimensions }}
-      </p>
-      <div v-if="viewKeys.length > 1" class="views" role="tablist">
-        <button
-          v-for="v in viewKeys"
-          :key="v"
-          :class="['view-btn', { active: current === v }]"
-          role="tab"
-          :aria-selected="current === v"
-          @click="current = v">
-          {{ $t('pages.plushies.' + v) }}
-        </button>
+      <div class="meta-top">
+        <h3>{{ $t('pictures.plushies.' + plushie.i18nKey + '.title') }}</h3>
+        <p class="description">
+          {{ $t('pictures.plushies.' + plushie.i18nKey + '.description') }}
+        </p>
+      </div>
+
+      <div class="meta-bottom">
+        <p v-if="plushie.dimensions" class="dimensions">
+          <UIcon name="i-lucide-ruler" class="dim-icon" />
+          {{ $t('pages.plushies.dimensions') }} : {{ plushie.dimensions }}
+        </p>
+
+        <div v-if="viewKeys.length > 1" class="views" role="tablist">
+          <button
+            v-for="v in viewKeys"
+            :key="v"
+            :class="['view-btn', { active: current === v }]"
+            role="tab"
+            :aria-selected="current === v"
+            @click="current = v">
+            {{ $t('pages.plushies.' + v) }}
+          </button>
+        </div>
       </div>
     </div>
   </article>
@@ -119,66 +125,86 @@ const { el, visible } = useReveal()
     flex-direction: column;
     align-items: center;
     gap: 0.6rem;
+    flex: 1;
+    justify-content: space-between;
 
-    h3 {
-      font-size: 1.25rem;
-      margin: 0;
-      color: $white-color;
-      text-align: center;
-    }
-
-    .description {
-      font-size: 0.88rem;
-      color: $text-muted;
-      text-align: center;
-      line-height: 1.5;
-      margin: 0;
-    }
-
-    .dimensions {
-      display: inline-flex;
+    .meta-top {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 0.35rem;
-      font-size: 0.8rem;
-      color: $text-faint;
-      margin: 0;
+      gap: 0.6rem;
 
-      .dim-icon {
-        font-size: 0.9rem;
-        color: $aurora-3;
+      h3 {
+        font-size: 1.25rem;
+        margin: 0;
+        color: $white-color;
+        text-align: center;
+      }
+
+      .description {
+        font-size: 0.88rem;
+        color: $text-muted;
+        text-align: center;
+        line-height: 1.5;
+        margin: 0;
       }
     }
 
-    .views {
+    .meta-bottom {
+      width: 100%;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.35rem;
-      margin-top: 0.25rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
 
-      .view-btn {
-        appearance: none;
-        border: 1px solid $border-medium;
-        background: rgba($white-color, 0.03);
-        color: rgba($text-color, 0.8);
-        font-size: 0.78rem;
-        font-weight: 600;
-        letter-spacing: 0.02em;
-        padding: 0.35rem 0.7rem;
-        border-radius: 999px;
-        cursor: pointer;
-        transition: all 0.2s ease;
+      .dimensions {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.8rem;
+        color: $text-faint;
+        margin: 0;
+        justify-content: center;
 
-        &:hover {
-          color: $white-color;
-          border-color: rgba($aurora-1, 0.4);
+        .dim-icon {
+          font-size: 0.9rem;
+          color: $aurora-3;
         }
+      }
 
-        &.active {
-          background: linear-gradient(120deg, $aurora-1, $aurora-2);
-          background-clip: padding-box;
-          color: $white-color;
-          border-color: transparent;
+      .views {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.35rem;
+        margin-top: 0;
+
+        .view-btn {
+          appearance: none;
+          border: 1px solid $border-medium;
+          background: rgba($white-color, 0.03);
+          color: rgba($text-color, 0.8);
+          font-size: 0.78rem;
+          font-weight: 600;
+          letter-spacing: 0.02em;
+          padding: 0.35rem 0.7rem;
+          border-radius: 999px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          &:hover {
+            color: $white-color;
+            border-color: rgba($aurora-1, 0.4);
+          }
+
+          &.active {
+            background: linear-gradient(120deg, $aurora-1, $aurora-2);
+            background-clip: padding-box;
+            color: $white-color;
+            border-color: transparent;
+          }
         }
       }
     }
